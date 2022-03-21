@@ -1,0 +1,231 @@
+
+/*
+Uso de propiedades personalizadas (variables) en CSS
+https://developer.mozilla.org/es/docs/Web/CSS/Using_CSS_custom_properties
+*/
+
+/* lista de colores */
+
+:root {
+	--headerBlue: rgba(45,77,203,1.0);
+	/*--headerGray: rgba(109,123,147,1.0);*/
+
+	--bigTitleBlue: rgba(31,62,114,1.0);
+	/*--bodyTextGray: rgba(109,124,150,1.0);*/
+	/*--bodyTextGray2: rgba(69,93,137,1.0);*/
+	--textGrayDark: rgba(69,93,137,1.0);
+	--textGrayLight: rgba(109,123,147,1.0);
+
+	--iconYellow: rgaba(255,208,18,1.0);
+	--iconBlue: rgba(49,81,207,1.0);
+	/*--iconTextGray: rgba(68,93,137,1.0);*/
+
+	--imgBkgrnBlue: rgba(19,140,227,1.0);
+	--bkgndBlue: rgba(238,243,255,1.0);
+	--triangles: rgba(244,246,251,1.0);
+}
+
+/**********estilos generales**********/
+a {
+   text-decoration: none;
+}
+body {
+    font-family: "Churchward Isabella", "Gibson", "Ridley Grotesk Equip", "Touch", "Sans-serif";
+	/*
+	bigTitle:Churchward Isabella/Gibson/Ridley Grotesk Equip
+	header: touche, except text vaccination: Gibson
+	textGrays: touche
+	*/
+}
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 80px;
+    overflow: hidden;
+	border: 1px solid black;
+}
+
+
+/***********estilos del header***********/
+.header {
+    position: relative;
+    width: 100%;
+    padding: 2em 0;
+    background-color: rgba(255, 255, 255, 0.9);
+	border: 1px solid black;
+    z-index: 10;
+	transition: background-color 0.4s ease;
+    transition: padding 0.3s ease;
+    /*background: linear-gradient(to right, var(--white) 50%, #e6f4fc 50%);*/
+}
+.gridHeader{
+	width: 100%;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 10% 30% auto auto auto auto auto 5%;
+}
+.navVaccination {
+    font-size: 2em;
+    font-weight: bold;
+    line-height: 0;
+    color: var(--headerBlue);
+    cursor: pointer;
+}
+.navItems {
+    font-weight: bold;
+    color: var(--textGrayDark);
+	transition: color ease 0.3s;
+}
+.navItems:hover {
+    color: var(--textGrayLight);
+}
+.boton {
+    padding: 15px 24px;
+    background-color: var(--headerBlue);
+    font-weight: bold;
+    text-align: center;
+    color:rgba(255,255,255,1.0);
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 1px 15px 15px 0px rgba(23,54,140,0.33);
+    border: none;
+    transition: background-color ease 0.3s;
+}
+.boton:hover {
+    background-color: var(--bigTitleBlue);
+	color:rgba(255,255,255,1.0);
+}
+
+/**********Seccion Fight virus...*************/
+.gridFightVirus{
+	width: 100%;
+	margin: 0 auto;
+	padding:0 auto;
+	border: 1px solid black;
+	display: grid;
+	grid-template-columns: 7% 43% 50%;
+	border: 1px solid black;
+	/**/
+	background-color: white;
+	/**/
+}
+.bigTitle{
+	padding:100px 100px 0px 0px;
+	font-size: 4.5em;
+	font-weight: bold;
+    color: var(--bigTitleBlue);
+}
+
+.infoFight{
+	padding:30px 150px 0px 0px;
+	font-size: 1.5em;
+	font-weight: normal;
+	color:var(--textGrayLight);
+		
+}
+.textIcons{
+	padding:5px 35px 10px 10px;
+	font-size: 1.2em;
+	font-weight: bold;
+	color:var(--textGrayDark);
+}
+.icon {
+    /*display: inline-block;*/
+    padding: 1px;
+	width: 2em;
+	border-radius: 5px;
+	box-shadow: 0px 5px 2px 1px rgba(255,208,18,0.3);
+}
+.textScheduleVac{
+	padding:5px 0px 5px 15px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--bigTitleBlue);
+}
+.iconBlue {
+    /*display: inline-block;*/
+    padding: 1px;
+	width: 2em;
+	border-radius: 5px;
+	box-shadow: 0px 5px 2px 1px rgba(43,74,201,0.3);
+}
+
+
+
+.nurse1{
+	width:100%;
+}
+
+
+/**********Seccion Farmaceuticas*************/
+.farmaceuticas{
+	width: 100%;
+	margin: 0 auto;
+	padding:0 80px;
+	border: 1px solid black;
+	/**/
+	background-color: green;
+	/**/
+}
+.gridFarmaceuticas{
+	width: 100%;
+	margin: 0 auto;
+	padding-top: 100px;
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+	border: 1px solid black;
+}	
+.imgFarma{
+	max-width: 100%;
+  height: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+.ajuste10{
+	padding: 100px 0;
+}
+.ajuste9{
+	padding: 90px 0;
+}
+.ajuste8{
+	padding: 80px 0;
+}
+.ajuste7{
+	padding: 70px 0;
+}
+.ajuste6{
+	padding: 60px 0;
+}
+.ajuste5{
+	padding: 50px 0;
+}
+.ajuste4{
+	padding: 40px 0;
+}
+.ajuste3{
+	padding: 30px 0;
+}
+.ajuste2{
+	padding: 20px 0;
+}
+.ajuste1{
+	padding: 10px 0;
+}
+
+/*
+p {
+    font-size: 1em;
+    color: var(--textGrayDark);
+    font-weight: 38em;
+    line-height: 1.5;
+}
+*/
